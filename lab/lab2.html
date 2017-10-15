@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算器</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input{
+			width: 80px;
+			height: 80px;
+		}
+		td{
+			text-align: center;
+		}
+		#input1{
+			width: 300px;
+			height: 60px;
+		}
+	</style>
+	<script type="text/javascript">
+		var str='';
+		function showData(num){
+			str += document.getElementById(num).value;
+			document.getElementById("input1").value = str;
+		}
+		function clearData(){
+			str="";
+			document.getElementById("input1").value=0;
+		}
+		function calculate(){
+			var resultNum = document.getElementById('input1').value;
+			document.getElementById('input1').value=eval(resultNum);
+		}
+	</script>
+</head>
+<body>
+	<table border=1 width=500px height=500px>
+		<tr>
+			<td colspan="3" id="show"><input type="text" name="input1" id="input1"/> </td>
+			<td><input type="button" name="clear1" id="clear1" value="C" onclick="clearData()" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="one" id="one" value="1" onclick="showData('one')" /></td>
+			<td><input type="button" name="two" id="two" value="2" onclick="showData('two')" /></td>
+			<td><input type="button" name="three" id="three" value="3" onclick="showData('three')" /></td>
+			<td><input type="button" name="jia" id="jia" value="+" onclick="showData('jia')" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="four" id="four" value="4" onclick="showData('four')" /></td>
+			<td><input type="button" name="five" id="five" value="5" onclick="showData('five')" /></td>
+			<td><input type="button" name="six" id="six" value="6" onclick="showData('six')" /></td>
+			<td><input type="button" name="jian" id="jian" value="-" onclick="showData('jian')" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="seven" id="seven" value="7" onclick="showData('seven')" /></td>
+			<td><input type="button" name="eight" id="eight" value="8" onclick="showData('eight')" /></td>
+			<td><input type="button" name="nine" id="nine" value="9" onclick="showData('nine')" /></td>
+			<td><input type="button" name="cheng" id="cheng" value="*" onclick="showData('cheng')" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" name="zero" id="zero" value="0" onclick="showData('zero')" /></td>
+			<td><input type="button" name="dian" id="dian" value="." onclick="showData('dian')" /></td>
+			<td><input type="button" name="deng" id="deng" value="=" onclick="calculate()" /></td>
+			<td><input type="button" name="chu" id="chu" value="/" onclick="showData('chu')" /></td>
+		</tr>
+	</table>
+</body>
+</html>
