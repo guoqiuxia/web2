@@ -1,0 +1,14 @@
+p{
+	width: 680px;
+	height: 25px;
+	padding: 10px;
+	background-image: url(../images/bg.jpg);
+}
+button{
+	background-color: white;
+	border-color: #999;
+	border-width: 1px;
+	float: right;
+	position: relative;
+	right: 600px;
+}
