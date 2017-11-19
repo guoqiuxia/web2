@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>评价与打分</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+        p{
+            width: 680px;
+            height: 25px;
+            padding: 10px;
+            background-image: url(../images/bg.jpg);
+        }
+        button{
+            background-color: white;
+            border-color: #999;
+            border-width: 1px;
+            float: right;
+            position: relative;
+            right: 600px;
+        }
+    </style>
+</head>
+<body>
+    <p>宝贝与描述相符（打分匿名）</p>
+    <div>
+    <img src="images/star0.png" onmouseover="starPic(1)" onmouseout="hide(1)" onclick="qd(1)">
+    <img src="images/star0.png" onmouseover="starPic(2)" onmouseout="hide(2)" onclick="qd(2)">
+    <img src="images/star0.png" onmouseover="starPic(3)" onmouseout="hide(3)" onclick="qd(3)">
+    <img src="images/star0.png" onmouseover="starPic(4)" onmouseout="hide(4)" onclick="qd(4)">
+    <img src="images/star0.png" onmouseover="starPic(5)" onmouseout="hide(5)" onclick="qd(5)">
+    </div>
+    <br/>
+    <textarea rows="15" cols="100" id="comment"></textarea>
+    <br/>
+    <!-- <input type="button" name="comment1" value="公开评论"><img src="images/sanjiao.png"></input> -->
+    <button>公开评论<img src="images/sanjiao.png"></button>
+</body>
+<script type="text/javascript">
+    var arr = new Array('很差','差','一般','满意','非常满意');
+var a = document.getElementsByTagName("img");
+var con = false;
+function starPic(count)
+{
+    if(con==true)
+    {
+        return 0;
+    }
+    if(count<=2)
+    {        
+        for (var i=0; i<count;i++) 
+        {
+            a[i].src="images/star1.png";
+        }   
+    }
+    else if(count>2)
+    {
+        for(var j=0;j<count;j++)
+        {
+            a[j].src="images/star2.png";
+        }
+    }
+    document.getElementById('comment').value=arr[count-1];
+}
+function hide(count)
+{
+    if(con==false)
+    {
+        for(var q=0;q<count;q++)
+        {
+            a[q].src="images/star0.png";
+        }
+        document.getElementById('comment').value='';
+    }
+    else if(con==true)
+    {
+        return 0;
+    }
+}
+function qd(count)
+{
+    if(con==true)
+    {
+        return 0;
+    }
+    if(count<=2)
+    {
+        for(var p=0;p<count;p++)
+        {
+            arr[p].src="images/star1.png";
+        }
+    }
+    else if(count>2)
+    {
+        for(var m=0;m<count;m++)
+        {
+            arr[m].src="images/star2.png";
+        }
+    }
+    document.getElementById("comment").value=arr[count-1];
+    con=true;
+}
+</script>
+</html>
