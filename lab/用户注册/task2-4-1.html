@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>用户注册</title>
+	<style type="text/css">
+		#span1{
+			color: red;
+		}
+		#span2{
+			color: red;
+		}
+		#span3{
+			color: red;
+		}
+	</style>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	  	$(function(){
+	      	$("#address").focus(function(){ 
+				var txt_value =  $(this).val();   
+				if(txt_value==this.defaultValue){
+	                $(this).val("");              
+				} 
+		  });
+		  $("#address").blur(function(){		  
+		  	    var txt_value =  $(this).val();   
+				if(txt_value==""){
+	            	var $error1=$('<span id="span1">用户名不能为空</span>');
+	            	$("#address").after($error1);
+				} 
+				else{
+					$("#span1").remove();
+				}
+		  })
+
+		  $("#password").focus(function(){
+				var txt_value =  $(this).val();
+				if(txt_value==this.defaultValue){
+	                $(this).val("");
+				} 
+		  });
+		  $("#password").blur(function(){
+		  	    var txt_value =  $(this).val();
+				if(txt_value==""){
+	               var $error2=$('<span id="span2">密码不能为空</span>');
+	               $("#password").after($error2);
+				}
+				else{
+					$("#span2").remove();
+				} 
+		    })
+		  $("#password1").focus(function(){
+				var txt_value =  $(this).val();
+				if(txt_value==this.defaultValue){
+	                $(this).val("");
+				} 
+		  });
+		  $("#password1").blur(function(){
+		  	    var txt_value =  $(this).val();
+				if(txt_value==""){
+	                var $error3=$('<span id="span3">确认密码不能为空</span>');
+	            	$("#password1").after($error3);
+				}
+				else{
+					$("#span3").remove();
+				} 
+		    })
+		  $("#but").click(function(){
+		  	    var pw = $("#password").val();
+		  	    var pw1 = $("#password1").val();
+		  	    if(pw!='' && pw1!='' && pw==pw1){
+		  	    	alert("注册成功");
+		  	    }
+		  	    else if(pw!=pw1){
+		  	    	alert("两次密码不一致");
+		  	    }
+		  	    else{
+		  	    	alert("注册失败");
+		  	    }
+		  })
+	    });
+	</script>
+</head>
+<body>
+    <input type="text" id="address" value="请输入用户名"/>   
+    <br/><br/>
+	<input type="text" id="password" value="请输入密码"/>  
+	<br/><br/>
+	<input type="text" id="password1" value="请输入确认密码"/>  
+	<br/><br/>
+	<input type="button" id="but" value="注册"/>
+</body>
+</html>
