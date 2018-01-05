@@ -1,3 +1,4 @@
+window.onload=function(){
 var show = document.createElement('show');
 var send = document.getElementsByClassName('send')[0];
 var typing = document.getElementsByClassName('typing')[0];
@@ -38,4 +39,5 @@ for (var i=0; i<liNodes.length; i++){
     liNodes[i].onmouseout = function(){
         this.className = "";
     }
+}
 }
