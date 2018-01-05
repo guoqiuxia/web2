@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/signin.js"></script>
+</head>
+<body>
+	<div class="back">
+		<div class="logo">
+			<h2 class="welcom">登&nbsp;&nbsp;&nbsp;录</h2><br/>
+			<form action="#" name="f" method="post">
+				<div class="in">
+					<span class="user"></span>
+					<input name="logname" class="text" type="text"placeholder="请输入账户名">
+				</div>
+				<div class="in">
+					<span class="uer"></span>
+					<input name="logpass" class="text" position:absolute; z-index:100; type="password" placeholder="请输入密码">
+				</div>
+				<div class="mb2">
+					<button type="button" onClick="processerbar(3000)" class="submit">登录</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="rate" id="probar">
+		<div id="percent"></div>
+		<div id="line" w="100" style="width:0px;"></div>
+		<div id="msg"></div>
+	</div>
+</body>
+</html>

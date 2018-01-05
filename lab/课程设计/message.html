@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>留言板</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/message.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	
+</head>
+<body>
+	<div id="top">
+		<ul id="nav">
+			<li><a  href="#">我的主页</a>
+				<ul >
+					<li><a href="#">主页介绍</a></li>
+					<li><a href="#">学历介绍</a></li>
+				</ul>
+			</li>
+			<li><a href="#">个人简介</a>
+				<ul>
+					<li><a href="#">主人相册</a></li>
+					<li><a href="#">最新图集</a></li>
+				</ul>
+			</li>
+			<li><a href="#">日志</a>
+				<ul>
+					<li><a href="#">技术精粹</a></li>
+					<li><a href="#">精彩转载</a></li>
+				</ul>
+			</li>
+			<li><a href="#">代码路</a>
+				<ul>
+					<li><a href="#">C/C++</a></li>
+					<li><a href="#">WEB</a></li>
+				</ul>
+			</li>
+			<li><a href="#">留言板</a>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="left">
+			<img src="images/3.png">
+			<p>姓名：郭秋霞</p><br/>
+			<p>专业：软件工程</p><br/>
+			<p>联系我</p>
+			<hr id="hrw"><br/>
+			<p>电话：0311-8888888</p><br/>
+			<p>传真：0311-8888888</p><br/>
+			<p>E-mail：666666666@qq.com</p><br/>
+			<p>QQ：666666666</p>
+		</div>
+		<div id="right">
+			<div class="comment">
+				<div class="enter">
+					<textarea class="typing"></textarea>
+					<ul class="btn">
+						<li class="send">
+							发送(s)
+							<p class="warning">发送内容不能为空，请重新输入</p>
+						</li>
+					</ul>
+				</div>
+				<br/>
+				<div class="show">
+					<ul id="get">
+						<li class="rope">
+							<p class="time">2017/01/01 下午3:46:32</p>
+							<p class="word">
+								<span class="head"></span>
+								<span class="person">用户666</span>
+							</p><br/>
+							<p class="conText">欢迎建议、提问，大家共同学习！</p><br/>
+						</li>
+					</ul>
+				</div>	
+			</div>
+		</div>	
+	</div>
+</body>
+<script type="text/javascript" src="js/message.js"></script>
+</html>
